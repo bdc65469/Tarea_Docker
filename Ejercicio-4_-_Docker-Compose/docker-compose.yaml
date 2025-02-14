@@ -1,0 +1,8 @@
+version: '3.8'                     # Versión de Compose
+services:                          # Define los contenedores q se ejecutarán
+  htop:                            # Nombre del servicio
+    image: alpine                  # Imagen q usará el contenedor
+    container_name: cont_htop      # Nombre del contenedor
+    stdin_open: true               # Mantiene la entrada estandar abierta
+    tty: true                      # Habilita un terminal interactivo
+    command: sh -c "apk add --no-cache htop && htop"  # Instala htop y lo  ejecuta
